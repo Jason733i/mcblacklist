@@ -1,0 +1,27 @@
+#server_form
+  = form_for server, :server, url: url do |s|
+    %ul
+      %li.left_side
+        Name:
+      %li.right_side
+        = s.text_field :name
+    %ul
+      %li.left_side
+        Server IP:
+      %li.right_side
+        = s.text_field :ip_address
+    %ul
+      %li.left_side
+        Port:
+      %li.right_side
+        = s.text_field :port
+    %ul
+      %li.left_side
+        Description:
+      %li.right_side
+        = s.text_area :description
+    %ul
+      %li.left_side
+        - # Save
+      %li.right_side
+        = s.submit "Save!"
