@@ -1,0 +1,59 @@
+#server_list {
+    width: 100%;
+    float: left;
+
+}
+#server_list table {
+    width: 100%;
+    float: left;
+}
+#server_form {
+    width: 100%;
+    float: left;
+}
+#server_form ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+#server_form li {
+    margin: 0;
+    padding: 2px;
+    width: 100px;
+    float: left;
+}
+#server_form li.left_side {
+    text-align: right;
+    padding-top: 4px;
+}
+#server_form li.right_side {
+    text-align: left;
+}
+
+#server_display {
+    width: 100%;
+    float: left;
+}
+#server_display ul {
+    width: 100%;
+    margin: 10px;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+#server_display li {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    float: left;
+}
+#server_display li.left_side {
+    text-align: right;
+    padding-right: 10px;
+}
+#server_display li.right_side {
+    text-align: left;
+    padding-left: 10px;
+}

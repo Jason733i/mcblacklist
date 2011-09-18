@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %title
+      McBlacklist
+    = stylesheet_link_tag "styles"
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+%body
+  #header.gray_border.top_margin
+    .header_logo
+      %h1.float_left
+        = link_to "McBlacklist", root_path
+    .header_interface
+      = render 'devise/menu/header_interface'
+    .header_menu
+      %ul
+        %li
+          = link_to "Home", root_path
+        %li
+          = link_to "Servers", server_index_path  if current_user
+  #wrapper.gray_border.top_margin
+    = yield
+  #footer.gray_border.top_margin
+    Footer information about the organization

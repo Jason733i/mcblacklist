@@ -1,0 +1,183 @@
+html {
+    background: #111;
+    color: #CCC;
+    font-family: SANS-SERIF;
+}
+
+body {
+    width: 800px;
+    background: black;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+a {
+    color: #666;
+}
+a:hover {
+    color: #BBB;
+}
+h1 a {
+    text-decoration: none;
+    text-align: left;
+}
+input {
+    background: #111;
+    color: #666;
+    border: #333 2px solid;
+    padding: 0;
+    margin: 0;
+}
+input[type="submit"] {
+    padding: 4px;
+}
+input[type="submit"]:hover {
+    color: #CCC;
+}
+input[type="submit"]:active {
+    color: #333;
+    background-color: #777;
+    border-color: #666;
+}
+textarea {
+    background-color: #111;
+    color: #666;
+    border: #333 2px solid;
+    width: 250px;
+    height: 100px;
+    resize: none;
+}
+
+#header {
+    width: 796px;
+    float: left;
+    padding:  20px;
+    background: black;
+}
+#header div {
+    float:left;
+}
+#wrapper {
+    width: 796px;
+    float: left;
+    min-height: 500px;
+    padding: 20px;
+    background: black;
+}
+#footer {
+    width: 796px;
+    float: left;
+    margin-bottom: 10px;
+    padding:  20px;
+    background: black;
+
+}
+#error_explanation {
+    background-color: #200;
+    border: #666 solid 2px;
+    margin: 0 0 20px 240px;
+    padding-bottom: 10px;
+    float: left;
+    width: 340px;
+}
+#error_explanation h3{
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    float: left;
+}
+#error_explanation ul {
+    margin: 0 0 0 40px;
+    padding: 0;
+    float: left;
+}
+#error_explanation li {
+    float: left;
+    text-align: left;
+    list-style: square;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+div .field_with_errors input {
+    background-color: #200;
+}
+div .field_with_errors select {
+    background-color: #200;
+}
+div .field_with_errors check {
+    background-color: #200;
+}
+
+.gray_border {
+    border:  #333 solid 2px;
+}
+.top_margin {
+    margin-top: 10px;
+}
+.right_padding {
+    padding-right: 10px;
+}
+.left_padding {
+    padding-left: 10px;
+}
+.small_font {
+    font-size: small;
+}
+.float_left{
+    float: left;
+}
+.float_right {
+    float:right;
+}
+.header_logo {
+    float: left;
+    width: 526px;
+    margin-right: 20px;
+}
+.header_interface {
+    float: right;
+    width: 250px;
+}
+.header_interface td .label{
+    padding-top: 4px;
+}
+.header_interface ul {
+    float: left;
+    width: 100%;
+    margin: 3px 0;
+    padding: 0;
+    list-style: none;
+}
+.header_interface li {
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+.header_interface li.label {
+    padding: 0 6px 0 0;
+}
+.header_interface li.welcome_info {
+    padding-right: 10px;
+}
+.header_interface li .link {
+    padding: 4px;
+    margin-right: 20px;
+}
+.header_menu {
+    width: 100%;
+    float: left;
+}
+.header_menu ul {
+    float: left;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.header_menu li {
+    padding: 0;
+    margin: 0 0 0 15px;
+    float: left;
+}

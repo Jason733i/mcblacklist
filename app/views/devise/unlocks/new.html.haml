@@ -1,0 +1,16 @@
+%h2
+  Resend unlock instructions
+= devise_error_messages!
+#session_form
+  = form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
+    %ul
+      %li
+        = f.email_field :email
+      %li
+        = f.label :email, "Email:"
+
+    %ul
+      %li
+        = f.submit "Resend unlock instructions"
+  .links
+  = render :partial => "devise/shared/links"

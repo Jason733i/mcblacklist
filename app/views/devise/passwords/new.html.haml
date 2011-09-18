@@ -1,0 +1,17 @@
+= stylesheet_link_tag "devise"
+%h2
+  Forgot your password?
+Send me password reset instructions!
+= devise_error_messages!
+#session_form
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+    %ul
+      %li
+        = f.email_field :email
+      %li
+        = f.label :email, "Email: "
+    %ul
+      %li
+        = f.submit "Send"
+  .links{:style => "margin-left: 30px"}
+    = render :partial => "devise/shared/links"

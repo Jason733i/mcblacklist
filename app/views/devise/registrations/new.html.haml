@@ -1,0 +1,31 @@
+= stylesheet_link_tag "devise"
+%h2
+  Sign up
+= devise_error_messages!
+#session_form
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+    %ul
+      %li
+        = f.text_field :username
+      %li
+        = f.label :username, "Username: "
+    %ul
+      %li
+        = f.email_field :email
+      %li
+        = f.label :email, "Email: "
+    %ul
+      %li
+        = f.password_field :password
+      %li
+        = f.label :password, "Password: "
+    %ul
+      %li
+        = f.password_field :password_confirmation
+      %li
+        = f.label :password_confirmation, "Confirm: "
+    %ul
+      %li
+        = f.submit "Sign up"
+  .links
+    = render :partial => "devise/shared/links"

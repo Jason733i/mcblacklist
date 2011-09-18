@@ -1,0 +1,40 @@
+= stylesheet_link_tag "server"
+
+Display a user's servers
+
+#server_list
+  %table
+    %tr
+      %th
+        Server Name
+      %th
+        Owner
+      %th
+        IP Address
+      %th
+        Description
+      %th
+        Edit
+      %th
+        Delete
+    - @servers.each do |server|
+      %tr
+        %td
+          = link_to server.name, server_path(server.id)
+        %td
+          = server.user.username
+        %td
+          = server.ip_address
+          &colon;
+          = server.port
+        %td
+          = server.description
+        %td
+          = link_to "Edit", edit_server_path(server)
+        %td
+          = link_to "Delete", server, confirm: "Are you sure?", method: :delete
+
+  = link_to "Add New Server", new_server_path
+
+
+

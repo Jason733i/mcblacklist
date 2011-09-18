@@ -1,0 +1,35 @@
+- if user_signed_in?
+  %ul
+    %li
+      = link_to('Logout', destroy_user_session_path, :method => 'delete')
+    %li.welcome_info
+      |
+    %li.welcome_info
+      Welcome,&nbsp;
+      = current_user.username
+  %ul
+    %li.small_font
+      = current_user.last_sign_in_at.localtime.strftime("Last login on %b %d, %Y at %I:%M %p")
+- else
+  = form_tag new_user_session_path do
+    %ul
+      %li
+        = text_field_tag 'user[email]'
+      %li.label
+        Email:
+    %ul
+      %li
+        = password_field_tag 'user[password]'
+      %li.label
+        Password:
+    %ul
+      %li
+        = submit_tag 'Login'
+      %li
+        - if user_signed_in?
+          .link
+            = link_to('Edit registration', edit_user_registration_path)
+        - else
+          .link
+            = link_to('Register', new_user_registration_path)
+

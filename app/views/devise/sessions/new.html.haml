@@ -1,0 +1,25 @@
+= stylesheet_link_tag "devise"
+%h2
+  Sign in
+#session_form
+  = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    %ul
+      %li
+        = f.email_field :email
+      %li
+        = f.label :email, "Email: "
+
+    %ul
+      %li
+        = f.password_field :password
+      %li
+        = f.label :password, "Password: "
+    %ul
+      %li
+        = f.submit "Sign in"
+      - if devise_mapping.rememberable?
+        %li.remember_me
+          = f.check_box :remember_me
+          = f.label :remember_me
+  .links
+    = render :partial => "devise/shared/links"

@@ -1,0 +1,24 @@
+= stylesheet_link_tag "server"
+
+#server_display
+  %h2
+    = @server.name
+  %ul
+    %li.left_side
+      Name:
+    %li.right_side
+      = @server.name
+  %ul
+    %li.left_side
+      Server IP:
+    %li.right_side
+      = @server.ip_address
+      &colon;
+      = @server.port
+  %ul
+    %li.left_side
+      Description:
+    %li.right_side
+      = @server.description
+
+More statistics will be listed below the basic information

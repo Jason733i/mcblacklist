@@ -1,0 +1,22 @@
+= stylesheet_link_tag "devise"
+%h2
+  Change your password
+= devise_error_messages!
+#session_form
+  = form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+    = f.hidden_field :reset_password_token
+    %ul
+      %li
+        = f.password_field :password
+      %li
+        = f.label :password, "New Password: "
+    %ul
+      %li
+        = f.password_field :password_confirmation
+      %li
+        = f.label :password_confirmation, "Confirm new password"
+    %ul
+      %li
+        = f.submit "Change my password"
+  .links
+    = render :partial => "devise/shared/links"
