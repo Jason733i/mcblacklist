@@ -1,15 +1,17 @@
 class ServerController < ApplicationController
   include ApplicationHelper
+  load_and_authorize_resource
+
   def index
     unless current_user
       redirect_to root_path
     end
-    @servers = Server.find_all_by_user_id(current_user.id)
+    @servers = Server.accessible_by(current_ability).find_all_by_user_id(current_user.id)
     respond_to_resource @servers
   end
 
   def show
-    @server = Server.find_by_id(params[:id])
+    @server = Server.accessible_by(current_ability).find_by_id(params[:id])
     respond_to_resource @server
   end
 
@@ -18,7 +20,7 @@ class ServerController < ApplicationController
   end
 
   def edit
-    @server = @server || Server.find_by_id(params[:id])
+    @server = @server || Server.accessible_by(current_ability).find_by_id(params[:id])
   end
 
   def create
@@ -35,7 +37,7 @@ class ServerController < ApplicationController
 
   def update
     begin
-      @server = Server.find(params[:id])
+      @server = Server.accessible_by(current_ability).find(params[:id])
       @server.update_attributes(params[:server])
       @server.save!
     rescue
@@ -47,7 +49,7 @@ class ServerController < ApplicationController
 
   def destroy
     begin
-      Server.find_by_id(params[:id]).delete
+      Server.accessible_by(current_ability).find_by_id(params[:id]).delete
     rescue
       flash[:notice] = "You do not have permissions to delete that!"
     else

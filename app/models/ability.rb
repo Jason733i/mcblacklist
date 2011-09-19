@@ -9,6 +9,7 @@ class Ability
       can :manage, :all
     elsif user.member?
       can :read, :all
+      can :manage, Server, :user_id => user.id
     else
       can :read, :none
       can :manage, :none
