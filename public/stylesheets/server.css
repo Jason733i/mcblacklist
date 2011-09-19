@@ -3,13 +3,25 @@
     float: left;
 
 }
-#server_list table {
+#server_list table {    border-collapse: collapse;
+    border: #222 6px solid;
+    text-align: left;
     width: 100%;
     float: left;
+}
+#server_list tr.alternating {
+    background-color: #111;
+}
+#server_list td, th{
+    border: #222 4px solid;
+    padding: 4px;
 }
 #server_form {
     width: 100%;
     float: left;
+}
+#server_form form{
+    margin-left: 200px;
 }
 #server_form ul {
     width: 100%;
