@@ -5,6 +5,8 @@ Mcblacklist::Application.routes.draw do
 
   resources :user
 
+  resources :offense
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
