@@ -1,6 +1,7 @@
 = stylesheet_link_tag "server"
 
-Display a user's servers
+%h2.float_left.left_padding
+  = "#{current_user.username}'s Servers"
 
 #server_list
   %table
@@ -34,7 +35,7 @@ Display a user's servers
           \/
           = link_to "Delete", server, confirm: "Are you sure?", method: :delete
 
-  = link_to "Add New Server", new_server_path
+  = link_to "Add New Server", new_server_path, class: "float_left left_padding top_padding"
 
 
 

@@ -3,7 +3,6 @@ html {
     color: #CCC;
     font-family: SANS-SERIF;
 }
-
 body {
     width: 800px;
     background: black;
@@ -115,6 +114,9 @@ div .field_with_errors check {
 }
 .top_margin {
     margin-top: 10px;
+}
+.top_padding {
+    padding-top: 10px;
 }
 .right_padding {
     padding-right: 10px;
