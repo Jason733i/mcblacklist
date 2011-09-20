@@ -1,2 +1,25 @@
-%h1 Offense#show
-%p Find me in app/views/offense/show.html.haml
+= stylesheet_link_tag "offense"
+
+#offense_display
+  %h2
+    = @offense.name
+  %ul
+    %li.left_side
+      Name:
+    %li.right_side
+      = @offense.name
+  %ul
+    %li.left_side
+      Classification:
+    %li.right_side
+      = @offense.classification
+  %ul
+    %li.left_side
+      Severity:
+    %li.right_side
+      = @offense.severity
+  %ul
+    %li.left_side
+      Description:
+    %li.right_side
+      = @offense.description
