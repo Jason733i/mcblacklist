@@ -1,0 +1,26 @@
+#offense_form
+  = form_for offense, :offense, url: url do |o|
+    %ul
+      %li.left_side
+        Name:
+      %li.right_side
+        = o.text_field :name
+    %ul
+      %li.left_side
+        Classification:
+      %li.right_side
+        = o.select :classification, options_for_select(Offense.classifications)
+    %ul
+      %li.left_side
+        Severity:
+      %li.right_side
+        = o.select :severity, (0..9)
+    %ul
+      %li.left_side
+        Description:
+      %li.right_side
+        = o.text_area :description
+    %ul
+      %li.left_side
+      %li.right_side
+        = o.submit "Save!"

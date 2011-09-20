@@ -4,7 +4,7 @@ class CreateOffenses < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.integer :severity
-      t.string :type
+      t.string :classification
 
       t.timestamps
     end

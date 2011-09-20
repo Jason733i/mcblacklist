@@ -20,7 +20,7 @@
         %li
           = link_to "Servers", server_index_path  if current_user
         %li
-          = link_to "Offenses", offense_index_path if current_user.admin?
+          = link_to "Offenses", offense_index_path if current_user && current_user.admin?
   #wrapper.gray_border.top_margin
     = yield
   #footer.gray_border.top_margin

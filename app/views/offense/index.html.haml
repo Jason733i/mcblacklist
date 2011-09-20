@@ -1,2 +1,39 @@
-%h1 Offense#index
-%p Find me in app/views/offense/index.html.haml
+= stylesheet_link_tag "offense"
+
+%h2.float_left.left_padding
+  List of Offenses
+
+#offense_list
+  %table
+    %tr
+      %th
+        Offense Name
+      %th
+        Type
+      %th
+        Severity
+      %th
+        Description
+      %th
+        Edit
+        \/
+        Delete
+    - @offenses.each do |offense|
+      %tr{class: cycle("alternating", nil)}
+        %td
+          = link_to offense.name, server_path(offense.id)
+        %td
+          = offense.classification
+        %td
+          = offense.severity
+        %td
+          = offense.description
+        %td
+          = link_to "Edit", edit_offense_path(offense)
+          \/
+          = link_to "Delete", offense, confirm: "Are you sure?", method: :delete
+
+  = link_to "Add New Offense", new_offense_path, class: "float_left left_padding top_padding"
+
+
+

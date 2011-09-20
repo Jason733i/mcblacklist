@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(:version => 20110919013201) do
     t.string   "name"
     t.text     "description"
     t.integer  "severity"
-    t.string   "type"
+    t.string   "classification"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

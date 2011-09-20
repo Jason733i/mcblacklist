@@ -1,2 +1,7 @@
-%h1 Offense#new
-%p Find me in app/views/offense/new.html.haml
+= stylesheet_link_tag "offense"
+%h2
+  New Offense
+- if @offense.errors
+  = error_messages_for @offense
+
+= render partial: "form", locals: { offense: @offense, url: {controller: :offense, action: :create}}
